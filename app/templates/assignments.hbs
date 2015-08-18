@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-group">
+        {{#each assignment in model}}
+          {{#link-to 'assignments.assignment' assignment classNames="list-group-item" }}
+            <h4> {{assignment.title}} </h4>
+            {{date-formatted assignment.due_at}}
+          {{/link-to}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-8">
+      {{outlet}}
+    </div>
+
+  </div>
+</div>

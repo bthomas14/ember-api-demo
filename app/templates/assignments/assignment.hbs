@@ -1,0 +1,18 @@
+ <div class="tab-content">
+
+   <div role="tabpanel" id="show" {{bind-attr class='isShowingAssignment:show:hide :tab-pane'}}>
+    <div class="row row-space-top-2">
+      <div class="col-sm-8 h3 pull-left">{{model.title}}</div>
+      <span class="col-sm-4 text-right text-muted due-date">due {{date-formatted model.due_at}}</span>
+    </div>
+
+    <div class="row row-space-top-4">
+      <div class="col-sm-12">{{model.description}}</div>
+    </div>
+  </div>
+
+  <div role="tabpanel" id="submissions" {{bind-attr class='isShowingAssignment:hide:show :tab-pane'}}>
+    {{outlet}}
+
+  </div>
+</div>

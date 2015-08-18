@@ -1,0 +1,23 @@
+<div class="submission-contents flex-wrapper">
+  <img {{bind-attr src='item.creator.avatars.large'}} />
+  <div class="submitter-info flex-body">
+    <h3>{{item.creator.first_name}} {{item.creator.last_name}}</h3>
+    turned in {{date-formatted item.submitted_at}}
+  </div>
+  <a href="#" class='link-reset pull-right' {{action 'showDetails' item}}>
+    {{#if isShowingDetails}}
+      <span class="glyphicon glyphicon-triangle-top"></span>
+    {{else}}
+      <span class="glyphicon glyphicon-triangle-bottom"></span>
+    {{/if}}
+  </a>
+</div>
+
+
+{{#if isShowingDetails}}
+  <div class="dark-bg">
+    {{item.content}}
+  </div>
+{{/if}}
+
+{{yield}}

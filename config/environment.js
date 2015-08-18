@@ -16,7 +16,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    contentSecurityPolicyHeader: 'Content-Security-Policy-Report-Only',
+    contentSecurityPolicy: {
+      'default-src': "'self' 'unsafe-eval' http://localhost:4200 *.google.com",
+      'script-src': "'self' 'unsafe-eval' http://localhost:4200 'unsafe-inline' *.google.com *.googleapis.com *.gstatic.com/", // Allow scripts from https://cdn.mxpnl.com
+      'font-src': "'self' 'unsafe-eval' *.gstatic.com *.googleapis.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'connect-src': "'self' 'unsafe-inline' *", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'img-src': "'self' https://api.edmodo.com https://u.ph.edim.co",
+      'style-src': "'self' 'unsafe-inline' *.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+      'media-src': "'self'"
+    },
   };
 
   if (environment === 'development') {
