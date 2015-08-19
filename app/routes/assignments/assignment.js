@@ -13,11 +13,10 @@ export default Ember.Route.extend({
       type: 'get'
     });
   },
-  /*afterModel: function(controller, model) {
-    debugger;
-    //this._super(controller, model); // default template logic
+  afterModel: function(controller, model) {
+    this._super(controller, model); // default template logic
 
-    var appController = this.controllerFor('application');
-    appController.set('isShowingAssignment', true);
-  }*/
+    var assignmentController = this.controllerFor('assignments.assignment');
+    assignmentController.set('isShowingAssignment', true);
+  }
 });

@@ -1,5 +1,9 @@
 <ul class="list-group row-space-top-4">
   {{#each item in model}}
       {{show-submission item=item isShowing=isShowing action="toggleShow" tagName="li" classNames="list-group-item submissions"}}
+  {{else}}
+    <div class="text-center">
+      No submissions yet!
+    </div>
   {{/each}}
 </ul>

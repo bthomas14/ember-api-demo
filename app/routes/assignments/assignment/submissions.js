@@ -4,6 +4,12 @@ import ajax from 'ic-ajax';
 export default Ember.Route.extend({
   model: function(params, transition) {
     var assignmentModel = this.modelFor('assignments.assignment');
+
+    console.log("assignmentModel.isNew => " + assignmentModel.isNew);
+    if(assignmentModel.isNew) {
+      return [];
+    }
+
     var edmodoApiKey = '12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d',
         assignment = assignmentModel.id,
         assignment_creator = assignmentModel.creator.id;
@@ -13,11 +19,13 @@ export default Ember.Route.extend({
       url: url,
       type: 'get'
     });
+
+
   },
-  /*setupController: function(controller, model) {
+  setupController: function(controller, model) {
     this._super(controller, model); // default template logic
 
-    var appController = this.controllerFor('assignments');
+    var appController = this.controllerFor('assignments.assignment');
     appController.set('isShowingAssignment', false);
-  }*/
+  }
 });

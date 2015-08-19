@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isShowingAssignment: true,
+  //isShowingAssignment: true,
 
   isIndex: function() {
     if(this.get('currentPath') == "assignments.index") {
@@ -11,9 +11,9 @@ export default Ember.Controller.extend({
     }
   }.property('currentPath'),
 
-  actions: {
+  /*actions: {
     toggleNav: function() {
       this.toggleProperty('isShowingAssignment');
     }
-  }
+  }*/
 });

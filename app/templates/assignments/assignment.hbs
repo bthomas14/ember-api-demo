@@ -1,3 +1,13 @@
+<div class="navigation-tabs">
+    <div role="presentation" {{bind-attr class="isShowingAssignment:active :tab"}} {{action 'toggleNav'}}>
+      {{#link-to 'assignments.assignment' model class="link-reset"}} Assignment {{/link-to}}
+    </div>
+    <div role="presentation" {{bind-attr class="isShowingAssignment::active :tab"}} {{action 'toggleNav'}}>
+      {{#link-to 'assignments.assignment.submissions' model class="link-reset"}} Submissions {{/link-to}}
+    </div>
+</div>
+
+
  <div class="tab-content">
 
    <div role="tabpanel" id="show" {{bind-attr class='isShowingAssignment:show:hide :tab-pane'}}>
