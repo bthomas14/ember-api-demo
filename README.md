@@ -1,6 +1,6 @@
 # Project
 
-Demo here: https://bthomas-interview-project.herokuapp.com/
+Demo here: https://bthomas-edmodo-project.herokuapp.com/
 
 ## Prerequisites
 
