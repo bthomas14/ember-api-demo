@@ -1,4 +1,4 @@
-# Edmodo-project
+# Project
 
 Demo here: https://bthomas-interview-project.herokuapp.com/
 
