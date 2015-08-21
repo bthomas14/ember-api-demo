@@ -1,4 +1,4 @@
-{{#modal-dialog title="add-assignment-modal" action='close' }}
+{{#modal-dialog title="create-assignment-modal" action='close' }}
   <div class="clearfix" style="padding:20px;">
 
     <div {{action "close"}} class="close-modal" data-dismiss="modal">
@@ -17,7 +17,7 @@
         {{input type="date" class="form-control input-lg" placeholder="Due date..." value=assignmentDue}}
         {{textarea class="form-control input-lg" rows="5" placeholder="Describe the assignment..." value=assignmentDesc}}
       </div>
-      <button class="btn btn-lg btn-success btn-block" {{action "createAssignment" model}}>Create Assignment</button>
+      <button class="btn btn-lg btn-primary btn-block" {{action "createAssignment" model}}>Create Assignment</button>
     </form>
 
 

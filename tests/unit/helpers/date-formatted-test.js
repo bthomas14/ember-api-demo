@@ -1,7 +1,8 @@
 import { dateFormatted } from '../../../helpers/date-formatted';
 import { module, test } from 'qunit';
 
-module('Unit | Helper | date formatted');
+
+module('Unit | Helper | date-formatted');
 
 // Replace this with your real tests.
 test('it works', function(assert) {

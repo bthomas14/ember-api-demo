@@ -3,31 +3,25 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['assignments'],
 
-  debugModal: function() {
-    console.log('in modalController');
-  }.on('init'),
-
   actions: {
-    createAssignment: function(model) {
-      var title = this.get('assignmentTitle'),
-          due_at = this.get('assignmentDue'),
-          description = this.get('assignmentDesc');
-
-      //var appController = this.controllerFor('assignments');
-      this.get('model').pushObject({
-        title: title,
-        due_at: due_at,
-        description: description,
-        id: Math.floor(Math.random()*10000000),
-        isNew: true
+    createAssignment: function() {
+      // If we were persisting to API, we would instead do an ajax POST
+      // Since we're not, this data will disappear on refresh, no id is created
+      var newAssignment = this.store.createRecord('assignment', {
+        title: this.get('assignmentTitle'),
+        due_at: this.get('assignmentDue'),
+        description: this.get('assignmentDesc')
       });
 
-      this.set('assignmentTitle', ""),
-      this.set('assignmentDue', null),
+      this.controllerFor('assignments').get('model').pushObject(newAssignment);
+
+
+      // Reset form values
+      this.set('assignmentTitle', "");
+      this.set('assignmentDue', null);
       this.set('assignmentDesc', "");
 
       this.send('closeModal');
-
     },
     close: function() {
       console.log('in modalController.close');

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'new-edomodo-project',
+    modulePrefix: 'edmodo-project',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

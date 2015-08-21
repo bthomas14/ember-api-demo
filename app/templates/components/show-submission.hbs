@@ -1,7 +1,7 @@
 <div class="submission-contents flex-wrapper">
-  <img {{bind-attr src='item.creator.avatars.large'}} />
+  <img {{bind-attr src='item.avatar'}} height="140px" width="140px"/>
   <div class="submitter-info flex-body">
-    <h3>{{item.creator.first_name}} {{item.creator.last_name}}</h3>
+    <h3>{{item.creator}}</h3>
     turned in {{date-formatted item.submitted_at}}
   </div>
   <a href="#" class='link-reset pull-right' {{action 'showDetails' item}}>
@@ -16,7 +16,7 @@
 
 {{#if isShowingDetails}}
   <div class="dark-bg">
-    {{item.content}}
+    {{item.submitText}}
   </div>
 {{/if}}
 

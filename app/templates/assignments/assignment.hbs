@@ -1,3 +1,5 @@
+<button {{action 'openModal' 'create-assignment-modal' model}} class="btn btn-info btn-block visible-xs-block row-space-4">Create Assignment</button>
+
 <div class="navigation-tabs">
     <div role="presentation" {{bind-attr class="isShowingAssignment:active :tab"}} {{action 'toggleNav'}}>
       {{#link-to 'assignments.assignment' model class="link-reset"}} Assignment {{/link-to}}
@@ -5,7 +7,10 @@
     <div role="presentation" {{bind-attr class="isShowingAssignment::active :tab"}} {{action 'toggleNav'}}>
       {{#link-to 'assignments.assignment.submissions' model class="link-reset"}} Submissions {{/link-to}}
     </div>
+
+    <button {{action 'openModal' 'create-assignment-modal' model}} class="btn btn-info pull-right hidden-xs">Create Assignment</button>
 </div>
+
 
 
  <div class="tab-content">

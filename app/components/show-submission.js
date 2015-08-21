@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   isShowingDetails: false,
 
-  didInsertElement: function(item) {
+  // By default, do not show expanded submissions
+  didInsertElement: function() {
     this.set('isShowingDetails', false);
   },
 

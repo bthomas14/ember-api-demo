@@ -1,7 +1,7 @@
 {
-  "name": "new-edomodo-project",
+  "name": "edmodo-project",
   "version": "0.0.0",
-  "description": "Small description for new-edomodo-project goes here",
+  "description": "Small description for edmodo-project goes here",
   "private": true,
   "directories": {
     "doc": "doc",
