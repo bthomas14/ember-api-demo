@@ -1,7 +1,3 @@
-# Project
-
-Demo here: https://bthomas-edmodo-project.herokuapp.com/
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
